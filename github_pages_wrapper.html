@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Dokter Unit - Financial Dashboard</title>
+  
+  <!-- Favicon & Mobile Web App Meta Tags -->
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><path d='M50 20 A30 30 0 0 1 80 50 L50 50 Z' fill='%23ffffff'/><circle cx='50' cy='50' r='18' fill='%230f172a'/></svg>">
+
+  <style>
+    /* Reset & Layar Penuh Tanpa Margin */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #0f172a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* Wadah Iframe Responsif */
+    .app-frame-container {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      flex: 1 1 auto;
+      background-color: #0f172a;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Iframe langsung tersambung ke Google Apps Script Web App -->
+  <div class="app-frame-container">
+    <iframe 
+      id="main-app-frame"
+      src="https://script.google.com/macros/s/AKfycbzzBbuV77J0Omo5aemeEKmeHhuWavmnVE2YsTAaX28KAvb6fLdlN7BD27lI7WlcX2RTtQ/exec"
+      title="Dokter Unit Pembukuan App"
+      allow="clipboard-write; camera; geolocation"
+      loading="eager">
+    </iframe>
+  </div>
+
+</body>
+</html>
